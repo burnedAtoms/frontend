@@ -1,6 +1,18 @@
+/* Variable Declaration */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+/* Header Styles */
+.resume-header {
+  @apply w-full px-6 py-3 flex flex-row justify-between items-center
+}
+.header-items-wrapper {
+  @apply py-2 px-6 border-[calc(1px)] border-white rounded-3xl bg-transparent text-center font-semibold font-sans box-border;
+}
+.header-items-wrapper:hover{
+  @apply bg-white text-[color:#202020] cursor-pointer transition-colors ease-in
 }
