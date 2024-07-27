@@ -1,9 +1,10 @@
-import React from 'react'
+import { forwardRef } from "react"
 
-const Header = () => {
+
+const Header = forwardRef((props,ref) => {
     return (
-        <header className="resume-header">
-            <a href="/"><img src="http://localhost:5173/src/assets/profile_logo.png" alt="" width={64} height={64} /></a>
+        <header className="resume-header mb-6">
+            <a href="/"><img className="max-lg:hidden scale-0" ref={ref} src="http://localhost:5173/src/assets/web/profile_logo.png" alt="" width={64} height={64} /></a>
             <span className="header-items-wrapper">
                 About
             </span>
@@ -21,6 +22,6 @@ const Header = () => {
             </span>
         </header>
     )
-}
+});
 
 export default Header

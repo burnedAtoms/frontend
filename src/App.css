@@ -1,18 +1,79 @@
-/* Variable Declaration */
+/* Font Declaration */
+.sansita-swashed {
+  font-family: "Sansita Swashed", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.caudex-regular {
+  font-family: "Caudex", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caudex-bold {
+  font-family: "Caudex", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Root */
 #root {
-  max-width: 1280px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
+
+
+
 /* Header Styles */
 .resume-header {
-  @apply w-full px-6 py-3 flex flex-row justify-between items-center
+  @apply sticky mx-auto z-50 top-4 max-lg:w-full max-lg:gap-6 gap-4 px-6 py-2 flex flex-row justify-center lg:justify-between items-center max-lg:flex-wrap
 }
 .header-items-wrapper {
-  @apply py-2 px-6 border-[calc(1px)] border-white rounded-3xl bg-transparent text-center font-semibold font-sans box-border;
+  @apply py-2 px-6 border-[calc(1px)] border-white rounded-3xl bg-primary text-center tracking-wider font-semibold font-sans box-border;
 }
 .header-items-wrapper:hover{
-  @apply bg-white text-[color:#202020] cursor-pointer transition-colors ease-in
+  @apply bg-white text-primary cursor-pointer transition-colors ease-in
+}
+
+.text-secondary {
+  @apply text-[color:#A5A5A5];
+}
+
+.text-primary {
+  @apply text-[color:#202020]
+}
+.bg-primary {
+  @apply bg-[color:#202020];
+}
+
+.bg-secondary {
+  @apply bg-[color:#A5A5A5];
+}
+
+/* Animations */
+.hero-anim{
+  background: linear-gradient(90deg, #aaee52, #3ce7de, #676767, #A5A5A5);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s linear infinite;
+}
+
+.header-bg-color-anim{
+  background-color: black;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
 }
