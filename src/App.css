@@ -18,6 +18,12 @@
   font-style: normal;
 }
 
+.adlam-display-regular {
+  font-family: "ADLaM Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Root */
 #root {
   max-width: 1920px;
@@ -53,6 +59,23 @@
 
 .bg-secondary {
   @apply bg-[color:#A5A5A5];
+}
+
+/* Note Styles */
+.quote-text {
+  @apply px-12 font-serif text-6xl text-wrap tracking-wider leading-[6rem] text-white italic
+}
+
+.quote-author {
+
+}
+
+.quote-color {
+  background: linear-gradient(90deg, #3ce7de, #aaee52);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Animations */

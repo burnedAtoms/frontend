@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { forwardRef, useRef } from 'react';
+import { forwardRef, MutableRefObject, useRef } from 'react';
 
 gsap.registerPlugin(useGSAP);
 
@@ -10,7 +10,7 @@ const Hero = forwardRef((props,ref) => {
     return (
         <section ref={container} className="relative max-lg:flex max-lg:flex-col max-lg:items-center">
             <img
-                ref={ref}
+                ref={ref as MutableRefObject<HTMLImageElement>}
                 className="profile-img max-lg:relative max-lg:w-48 max-lg:h-48 lg:absolute lg:top-0 lg:-right-4 lg:w-[calc(36%)] aspect-square"
                 src="http://localhost:5173/src/assets/web/profile_logo.png"
             />
