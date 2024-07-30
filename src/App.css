@@ -61,14 +61,24 @@
   @apply bg-[color:#A5A5A5];
 }
 
-/* Note Styles */
+/* 
+  Note Styles 
+*/
 .quote-text {
   @apply px-12 font-serif text-6xl text-wrap tracking-wider leading-[6rem] text-white italic
 }
 
-.quote-author {
+/*
+  Skills Section Styles
+*/
 
+#skills-containter > span {
+  @apply bg-transparent border-2 border-white rounded-full text-white text-[2vw] px-6 py-4;
 }
+
+
+
+
 
 .quote-color {
   background: linear-gradient(90deg, #3ce7de, #aaee52);

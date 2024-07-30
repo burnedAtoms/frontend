@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-const Note = () => {
+function Note() {
     const personalQuote = useRef(null);
     useEffect(() => {
         const quoteContainer:HTMLSpanElement = personalQuote.current!;
@@ -42,7 +42,7 @@ const Note = () => {
     }, []);
 
     return (
-        <div id="note-container" className="relative max-lg:mt-16 lg:top-[calc(50vh)] left-auto flex-col items-start">
+        <div id="note-container" className="mt-16 lg:mt-[800px] relative max-lg:mt-16 lg:top-[calc(50vh)] left-auto flex-col items-start">
             <div id="icon-quote-container" className="px-6 w-full flex justify-between items-center">
                 <span className="flex justify-start max-w-16 aspect-square"><img src="http://localhost:5173/src/assets/web/icon_quote_open.svg" alt="" /></span>
                 <span className="flex justify-end max-w-16 aspect-square"><img src="http://localhost:5173/src/assets/web/icon_quote_close.svg" alt="" /></span>
