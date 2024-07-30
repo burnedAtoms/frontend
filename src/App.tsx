@@ -5,24 +5,22 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-const {Header,Hero, Note} = Sections;
+const {Header,Hero, Note, Skills} = Sections;
 
 function App() {
 
   const headerRef = useRef(null);
   const heroRef = useRef(null);
   const heroContainer = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(async () => {
     const heroImg = heroRef.current;
     const headerLogo = headerRef.current;
     const mm = gsap.matchMedia();
 
-    
-
     if (heroImg && headerLogo) {
       mm.add("(min-width: 1024px)", () => {
-        gsap.registerPlugin(ScrollTrigger);
         const tl = gsap.timeline({
             scrollTrigger: {
               trigger: heroImg,
@@ -56,9 +54,11 @@ function App() {
           <Hero ref={heroRef} />
         </section>
         <section>
+          <Skills />
+        </section>
+        <section>
           <Note />
         </section>
-        <div className="h-[calc(100vh)] w-[calc(100vw)]"></div>
       </main>
     </>
   )
