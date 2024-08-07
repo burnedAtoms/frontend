@@ -32,6 +32,10 @@
   text-align: center;
 }
 
+h1 {
+  @apply caudex-bold font-extrabold tracking-tight leading-relaxed
+}
+
 
 
 
@@ -65,23 +69,34 @@
   Note Styles 
 */
 .quote-text {
-  @apply px-12 font-serif text-6xl text-wrap tracking-wider leading-[6rem] text-white italic
+  @apply px-12 font-serif text-3xl lg:text-6xl text-wrap tracking-wider lg:leading-[6rem] text-white italic
 }
 
 /*
   Skills Section Styles
 */
 
-#skills-containter > span {
-  @apply bg-transparent border-2 border-white rounded-full text-white text-[2vw] px-6 py-4;
+.tw-skills-container {
+  @apply flex flex-wrap max-w-[80%] lg:max-w-[50%] justify-center items-center will-change-auto overflow-hidden;
+}
+
+#skills-container > span {
+  @apply border-[1px] border-white rounded-full text-white text-[2vw] px-3 py-2 caudex-regular will-change-auto;
+}
+
+
+#education-container > * > span {
+  @apply h-full flex flex-1;
+}
+
+#work-education-container span {
+  @apply font-mono h-full flex items-center justify-start text-slate-100;
 }
 
 
 
-
-
 .quote-color {
-  background: linear-gradient(90deg, #3ce7de, #aaee52);
+  background: linear-gradient(90deg, #3ce7de, #91FF82);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

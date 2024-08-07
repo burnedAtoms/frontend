@@ -26,9 +26,9 @@ const Skills = () => {
 
     
     return (
-        <div className="relative h-[100vh] w-full flex flex-col justify-center items-center">
-            <h1 className="mt-[12rem] lg:absolute flex text-center text-[20vw] caudex-bold opacity-60">SKILLS</h1>
-            <div ref={skillsContainer} id="skills-containter" className="flex flex-wrap gap-6 max-w-[80%] lg:max-w-[50%] justify-center items-center">  
+        <div className="lg:relative lg:top-16 h-[100vh] w-full flex flex-col justify-center items-center">
+            <h1 id="skills-heading" className="lg:mt-[12rem] lg:absolute flex text-center text-[15vw] caudex-bold opacity-60">SKILLS</h1>
+            <div ref={skillsContainer} id="skills-container" className="tw-skills-container">  
             </div>
         </div>
     )

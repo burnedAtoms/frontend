@@ -8,18 +8,18 @@ const Hero = forwardRef((props,ref) => {
     const container = useRef(null);
 
     return (
-        <section ref={container} className="relative max-lg:flex max-lg:flex-col max-lg:items-center">
+        <section ref={container} className="relative w-full max-lg:flex max-lg:flex-col max-lg:items-center">
             <img
                 ref={ref as MutableRefObject<HTMLImageElement>}
                 className="profile-img max-lg:relative max-lg:w-48 max-lg:h-48 lg:absolute lg:top-0 lg:-right-4 lg:w-[calc(36%)] aspect-square"
                 src="http://localhost:5173/src/assets/web/profile_logo.png"
             />
-            <span className="max-lg:hidden lg:absolute top-[calc(6vw)] left-[calc(8vw)] z-20 font sansita-swashed text-secondary text-[calc(3vw)]">Welcome,</span>
-            <span className="lg:absolute top-[calc(15vw)] left-[calc(30vw)] caudex-bold text-[color:#202020] text-[calc(4vw)] tracking-wider leading-[calc(6vw)]">
+            <span className="max-lg:hidden lg:absolute top-[14%] left-[7%] z-20 sansita-swashed text-secondary text-[3vw] xl:text-6xl">Welcome,</span>
+            <span className="mt-8 lg:absolute top-[30%] left-[30%] caudex-bold text-white lg:text-[color:#202020] text-[6vw] 2xl:text-[4em] tracking-wider lg:leading-[6rem]">
                 My name is <br />Zenroy Chance
             </span>
-            <span className="hero-anim lg:absolute bottom-[calc(1vw)] right-[calc(9vw)] z-20 sansita-swashed text-secondary md:text-[calc(2vw)] min-w-8">Scroll to see my journey</span>
-            <span className="z-10"><img className="max-lg:hidden w-[calc(90vw)] h-full" src="http://localhost:5173/src/assets/web/hero_bg.svg" alt="" /></span>
+            <span className="hero-anim lg:absolute bottom-[2rem] right-[4rem] xl:right[10%] z-20 sansita-swashed text-secondary max-2xl:text-[2vw] text-4xl">Scroll to see my journey</span>
+            <span className="z-10"><img className="max-lg:hidden lg:w-[calc(90vw)] lg:h-full" src="http://localhost:5173/src/assets/web/hero_bg.svg" alt="" /></span>
         </section>
     )
 });

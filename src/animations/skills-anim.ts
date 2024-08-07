@@ -3,7 +3,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const blurAnim = [{
     opacity: 0,
-    filter: `blur(20px)`,
+    filter: `blur(60px)`,
 }, {
     opacity: 1,
     filter: `blur(0px)`,
@@ -19,9 +19,9 @@ function skillsAnim(ref:HTMLDivElement) {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: skillsContainer,
-                    start: "center center+=50px",
+                    start: "center center",
                     pin: true,
-                    end: "1400px center",
+                    end: "+=100%",
                     scrub: true,
                 }
             });
@@ -36,6 +36,28 @@ function skillsAnim(ref:HTMLDivElement) {
                 .fromTo(skillsContainer.children[6], blurAnim[0], blurAnim[1], blurAnim[2].startPosition)
                 .fromTo(skillsContainer.children[0], blurAnim[0], blurAnim[1], blurAnim[2].startPosition)
                 .fromTo(skillsContainer.children[7], blurAnim[0], blurAnim[1], blurAnim[2].startPosition)
+                .fromTo(skillsContainer,{
+                    scale:1,
+                    opacity:1,
+                    transformOrigin:"center center"
+                },{
+                    scale:500,
+                    opacity:0,
+                    transformOrigin:"center 70%",
+                    ease:"power2.inOut",
+                    duration: 1,
+                }).fromTo(skillsContainer,{
+                    scale:500,
+                    opacity:0,
+                    transformOrigin:"center 70%",
+                    ease:"power2.inOut",
+                },{
+                    scale:1,
+                    transformOrigin:"center center",
+                    ease:"power2.inOut",
+                    duration: 0.3,
+                })
+
         });
     }
 }
