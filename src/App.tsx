@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-const {Header,Hero, Note, Skills} = Sections;
+const {Header,Hero, Note, Skills,WorkExperience} = Sections;
 
 function App() {
 
@@ -26,7 +26,6 @@ function App() {
               trigger: heroImg,
               start: "top 80px",
               scrub: true,
-              toggleActions: "reverse",
             },
           }
         );
@@ -49,12 +48,15 @@ function App() {
   return (
     <>
       <Header ref={headerRef}/>
-      <main className="relative">
+      <main className="w-full flex flex-col items-center gap-8">
         <section ref={heroContainer}>
           <Hero ref={heroRef} />
         </section>
         <section>
           <Skills />
+        </section>
+        <section>
+          <WorkExperience />
         </section>
         <section>
           <Note />
