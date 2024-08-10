@@ -6,6 +6,9 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import { loadExperienceAnim } from '../animations/work-experience-anim';
 import { useGSAP } from '@gsap/react';
 
+
+gsap.registerPlugin(ScrollTrigger);
+
 interface Items {
         leftItems: [string, string | string[]][];
         rightItems: [string, string | string[]][];
@@ -17,7 +20,6 @@ const WorkExperience = () => {
     const workExpRef = useRef(null);
     const [educationItems, setEducationItems] = useState<Items[]>([]);
     const [WorkExperienceItems, setWorkExperienceItems] = useState<Items[]>([]);
-    gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {
         if(!eduRef)return;
@@ -51,7 +53,7 @@ const WorkExperience = () => {
     }, []);
 
     return (
-        <div id="work-education-container" className="lg:h-[100vh] lg:mt-[10vh] w-[100vw] bg-primary mx-6 p-4 flex-col gap-8 flex justify-center items-center">
+        <div id="work-education-container" className="lg:h-[100vh] border-2 border-500 lg:mt-[10vh] w-full bg-primary mx-6 p-4 flex-col gap-8 flex justify-center items-center">
             <div ref={eduRef} id="education-container" className="flex flex-col w-3/5 gap-8 justify-center items-center">
                 <h1 className="text-[3em] text-gray-300 flex self-start">Education</h1>
                 {educationItems.map((edu:Items) => (

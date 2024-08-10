@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const blurAnim = [{
     opacity: 0,
@@ -11,7 +10,6 @@ const blurAnim = [{
 
 function skillsAnim(ref:HTMLDivElement) {
     const skillsContainer = ref!;
-    gsap.registerPlugin(ScrollTrigger);
     const skillsMM = gsap.matchMedia();
 
     if (gsap && skillsContainer.children.length) {
@@ -20,7 +18,7 @@ function skillsAnim(ref:HTMLDivElement) {
                 scrollTrigger: {
                     trigger: skillsContainer,
                     start: "center center",
-                    pin: true,
+                    pin: skillsContainer,
                     end: "+=100%",
                     scrub: true,
                 }

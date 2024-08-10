@@ -8,7 +8,7 @@ const Hero = forwardRef((props,ref) => {
     const container = useRef(null);
 
     return (
-        <section ref={container} className="relative w-full max-lg:flex max-lg:flex-col max-lg:items-center">
+        <div ref={container} className="relative w-full max-lg:flex max-lg:flex-col max-lg:items-center">
             <img
                 ref={ref as MutableRefObject<HTMLImageElement>}
                 className="profile-img max-lg:relative max-lg:w-48 max-lg:h-48 lg:absolute lg:top-0 lg:-right-4 lg:w-[calc(36%)] aspect-square"
@@ -20,7 +20,7 @@ const Hero = forwardRef((props,ref) => {
             </span>
             <span className="hero-anim lg:absolute bottom-[2rem] right-[4rem] xl:right[10%] z-20 sansita-swashed text-secondary max-2xl:text-[2vw] text-4xl">Scroll to see my journey</span>
             <span className="z-10"><img className="max-lg:hidden lg:w-[calc(90vw)] lg:h-full" src="http://localhost:5173/src/assets/web/hero_bg.svg" alt="" /></span>
-        </section>
+        </div>
     )
 });
 
