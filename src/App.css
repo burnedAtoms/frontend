@@ -1,4 +1,10 @@
 /* Font Declaration */
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .sansita-swashed {
   font-family: "Sansita Swashed", system-ui;
   font-optical-sizing: auto;
@@ -31,10 +37,34 @@
   text-align: center;
 }
 
+html {
+  scroll-behaviour: smooth;
+}
+
 h1 {
   @apply caudex-bold font-extrabold tracking-tight leading-relaxed
 }
 
+
+/* Hero styles */
+.hero-header-text {
+  font-size: clamp(1.5rem, 12vw + 1rem, 12rem);
+  font-family: "League Spartan", sans-serif;
+  text-align: left;
+  font-syle: normal;
+  font-weight: 600;
+}
+
+.league-spartan-extrabold {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.w-clamp-profile {
+  width: clamp(50vw + 1rem, 50vw + 1rem, 50vw);
+}
 
 
 
@@ -80,7 +110,7 @@ h1 {
 }
 
 #skills-container > span {
-  @apply border-[1px] border-white rounded-full text-white text-[2vw] px-3 py-2 caudex-regular will-change-auto;
+  @apply border-[1px] border-white rounded-full text-white text-[2vw] px-6 py-3 caudex-regular will-change-auto;
 }
 
 
@@ -123,4 +153,68 @@ h1 {
   50% {
     background-position: 0% 50%;
   }
+}
+
+/* Custom styles for card flip effect */
+.flip-card {
+  perspective: 1500px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #1a202c;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.flip-card h3 {
+  transform: perspective(500px), translateZ(50px);
+}
+
+.flip-card .view-details-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

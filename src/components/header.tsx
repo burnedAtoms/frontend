@@ -3,7 +3,7 @@ import { forwardRef, MutableRefObject } from "react"
 
 const Header = forwardRef((props,ref) => {
     return (
-        <header className="resume-header mb-6">
+        <header className="resume-header">
             <a href="/"><img className="max-lg:hidden scale-0" ref={ref as MutableRefObject<HTMLImageElement>} src="http://localhost:5173/src/assets/web/profile_logo.png" alt="" width={64} height={64} /></a>
             <span className="header-items-wrapper">
                 About

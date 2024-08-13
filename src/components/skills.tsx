@@ -30,8 +30,8 @@ const Skills = () => {
 
     
     return (
-        <div className="lg:relative lg:top-16 lg:h-[100vh] flex flex-col justify-center items-center">
-            <h1 id="skills-heading" className="lg:mt-[12rem] lg:absolute flex text-center text-[15vw] caudex-bold text-gray-300">SKILLS</h1>
+        <div className="lg:relative lg:top-16 lg:h-[110vh] flex flex-col items-center">
+            <h1 id="skills-heading" className="lg:absolute flex text-center text-[15vw] caudex-bold text-gray-300">SKILLS</h1>
             <div ref={skillsContainer} id="skills-container" className="tw-skills-container">  
             </div>
         </div>

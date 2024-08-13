@@ -16,9 +16,14 @@ function App() {
 
 
   useGSAP(() => {
-    const heroImg = heroRef.current;
-    const headerLogo = headerRef.current;
+    const heroImg:HTMLElement = heroRef.current!;
+    const headerLogo:HTMLElement = headerRef.current!;
+    const headerPosition:DOMRect = headerLogo.getBoundingClientRect();
+    const heroImgPosition:DOMRect = heroImg.getBoundingClientRect();
+
     const mm = gsap.matchMedia();
+    
+    const deltaX = headerPosition.left - heroImgPosition.left;
 
     if (heroImg && headerLogo) {
       mm.add("(min-width: 1024px)", () => {
@@ -30,8 +35,8 @@ function App() {
           },
         });
         tl.to(heroImg, {
-          x: "-220%",
-          y: "9.5vw",
+          x: deltaX * 1.4,
+          y: "15.5vw",
           scale: 0.05,
           autoAlpha: 0,
           duration: 2,
@@ -45,9 +50,9 @@ function App() {
   }, { scope: heroContainer, dependencies: [window.innerWidth] });
 
   return (
-    <div className="w-screen px-6">
+    <div id="main-wrapper" className="w-screen px-6">
       <Header ref={headerRef} />
-      <main className="w-full flex flex-col items-center gap-8">
+      <main id="main-content" className="relative w-full flex flex-col items-center gap-8">
         <section ref={heroContainer}>
           <Hero ref={heroRef} />
         </section>
@@ -57,7 +62,7 @@ function App() {
         <section className="w-full">
           <WorkExperience />
         </section>
-        <section className="h-[100vh]">
+        <section>
           <Projects />
         </section>
         <section>
