@@ -53,7 +53,7 @@ const WorkExperience = () => {
     }, []);
 
     return (
-        <div id="work-education-container" className="lg:h-[100vh] w-full bg-primary mx-6 p-4 flex-col gap-8 flex justify-center items-center border-2">
+        <div id="work-education-container" className="lg:h-[100vh] w-full bg-primary mx-6 p-4 flex-col gap-8 flex justify-center items-center">
             <div ref={eduRef} id="education-container" className="flex flex-col w-3/5 gap-8 justify-center items-center">
                 <h1 className="text-[5em] text-gray-300">Education</h1>
                 {educationItems.map((edu:Items) => (
