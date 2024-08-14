@@ -44,8 +44,8 @@ function Note() {
     return (
         <div id="note-container" className="relative h-full max-lg:mt-16 lg:top-[calc(50vh)] left-auto flex-col items-start">
             <div id="icon-quote-container" className="px-6 w-full flex justify-between items-center">
-                <span className="flex justify-start max-w-16 aspect-square"><img src="/assets/web/icon_quote_open.svg" alt="" /></span>
-                <span className="flex justify-end max-w-16 aspect-square"><img src="/assets/web/icon_quote_close.svg" alt="" /></span>
+                <span className="flex justify-start max-w-16 aspect-square"><img src="/frontend/assets/web/icon_quote_open.svg" alt="" /></span>
+                <span className="flex justify-end max-w-16 aspect-square"><img src="/frontend/assets/web/icon_quote_close.svg" alt="" /></span>
             </div>
             <h1  ref={personalQuote} id="personal-quote" className="quote-text">
                 The best way to predict the future is to create it.
