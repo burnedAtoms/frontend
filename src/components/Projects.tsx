@@ -30,7 +30,6 @@ const Projects = () => {
                     scrub: 1,
                     pin: true,
                     pinSpacing: true,
-                    markers: true,
                 },
             });
             tl.to(projectsElement, {
