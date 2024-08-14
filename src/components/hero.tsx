@@ -6,7 +6,7 @@ import { services } from '../lists/services';
 
 gsap.registerPlugin(CustomEase);
 
-const Hero = forwardRef((ref) => {
+const Hero = forwardRef((props,ref) => {
     const container = useRef(null);
     const serviceRef = useRef(null);
 
@@ -52,7 +52,7 @@ const Hero = forwardRef((ref) => {
                     <img
                     ref={ref as MutableRefObject<HTMLImageElement>}
                     className="absolute max-lg:top-[30vh] lg:-right-[18vw] flex justify-self-center opacity-30 profile-img w-clamp-profile aspect-square object-cover object-[center_top]"
-                    src="http://localhost:5173/src/assets/web/profile_logo.png"
+                    src="http://localhost:5173/frontend/src/assets/web/profile_logo.png"
                 />
                 </div>
             </div>

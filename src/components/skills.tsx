@@ -20,7 +20,7 @@ const Skills = () => {
                 skillSet.innerHTML += element;
             });
         }
-    },[]);
+    });
 
     useGSAP(() => {
         const skillSet:HTMLDivElement = skillsContainer.current!;
