@@ -10,8 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Skills = () => {
     const skillsContainer = useRef(null);
     const skillItems = skills;
-    const skillWrapper:string[] = [];
-    Array.from(skillItems.map(itemName => skillWrapper.push(`<span>${itemName}</span>`)));
 
     useGSAP(() => {
         const skillSet:HTMLDivElement = skillsContainer.current!;
