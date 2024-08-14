@@ -5,50 +5,54 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-const {Header,Hero, Note, Skills,WorkExperience} = Sections;
+const { Header, Hero, Note, Skills, WorkExperience, Projects } = Sections;
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-
   const headerRef = useRef(null);
   const heroRef = useRef(null);
   const heroContainer = useRef(null);
-  gsap.registerPlugin(ScrollTrigger);
 
-  useGSAP(async () => {
-    const heroImg = heroRef.current;
-    const headerLogo = headerRef.current;
+
+  useGSAP(() => {
+    const heroImg:HTMLElement = heroRef.current!;
+    const headerLogo:HTMLElement = headerRef.current!;
+    const headerPosition:DOMRect = headerLogo.getBoundingClientRect();
+    const heroImgPosition:DOMRect = heroImg.getBoundingClientRect();
+
     const mm = gsap.matchMedia();
+    
+    const deltaX = headerPosition.left - heroImgPosition.left;
 
     if (heroImg && headerLogo) {
       mm.add("(min-width: 1024px)", () => {
         const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: heroImg,
-              start: "top 80px",
-              scrub: true,
-            },
-          }
-        );
+          scrollTrigger: {
+            trigger: heroImg,
+            start: "top top-=96px",
+            scrub: true,
+          },
+        });
         tl.to(heroImg, {
-          x:"-220%",
-          y:"9.5vw",
+          x: deltaX * 1.4,
+          y: "15.5vw",
           scale: 0.05,
           autoAlpha: 0,
           duration: 2,
         }).fromTo(headerLogo, {
           scale: 0,
-        },{
+        }, {
           scale: 1
-        })
-      })
-    } 
-}, {scope: heroContainer, dependencies:[window.innerWidth]});
-
+        });
+      });
+    }
+  }, { scope: heroContainer, dependencies: [window.innerWidth] });
 
   return (
-    <>
-      <Header ref={headerRef}/>
-      <main className="w-full flex flex-col items-center gap-8">
+    <div id="main-wrapper" className="w-screen px-6">
+      <Header ref={headerRef} />
+      <main id="main-content" className="relative w-full flex flex-col items-center gap-8">
         <section ref={heroContainer}>
           <Hero ref={heroRef} />
         </section>
@@ -59,11 +63,14 @@ function App() {
           <WorkExperience />
         </section>
         <section>
+          <Projects />
+        </section>
+        <section>
           <Note />
         </section>
       </main>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

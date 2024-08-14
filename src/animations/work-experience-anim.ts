@@ -21,9 +21,8 @@ export function loadExperienceAnim(eduRef:HTMLElement,workExpRef:HTMLElement){
                     self.animation?.reverse();
                 },
                 onEnter: (self) => {
-                    self.animation?.duration(2);
+                    self.animation?.duration(1);
                 },
-                markers: true
             }
         });
 
@@ -35,16 +34,15 @@ export function loadExperienceAnim(eduRef:HTMLElement,workExpRef:HTMLElement){
         const workExpTL = gsap.timeline({
             scrollTrigger: {
                 trigger: workExpRef,
-                start: "top center+=100px",
+                start: "top center+=50px",
                 end: "bottom top",
                 onLeaveBack: (self) => {
                     self.animation?.duration(0.3);
                     self.animation?.reverse();
                 },
                 onEnter: (self) => {
-                    self.animation?.duration(2);
+                    self.animation?.duration(1);
                 },
-                markers: true
             }
         });
         timelineBody(workExpTL,workExpRef)
