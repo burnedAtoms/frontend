@@ -1,25 +1,27 @@
 import gsap from "gsap";
 
-const blurAnim = [{
-    opacity: 0,
-    filter: `blur(60px)`,
-}, {
-    opacity: 1,
-    filter: `blur(0px)`,
-}, { startPosition: "<20%" }];
-
 
 function skillsAnim(ref: HTMLDivElement) {
+
+    const blurAnim = [{
+        opacity: 0,
+        filter: `blur(60px)`,
+    }, {
+        opacity: 1,
+        filter: `blur(0px)`,
+    }, { startPosition: "<20%" }];
+    
+    const order = [5, 2, 8, 4, 1, 3, 6, 0, 7];
+
     const skillsContainer = ref!;
     const skillsMM = gsap.matchMedia();
-    const order = [5, 2, 8, 4, 1, 3, 6, 0, 7];
 
     if (gsap && skillsContainer.children.length) {
         skillsMM.add("(min-width: 1024px)", () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: skillsContainer,
-                    start: "clamp(center center)",
+                    start: "center center",
                     pin: skillsContainer,
                     end: "+=150%",
                     scrub: 1.5,
