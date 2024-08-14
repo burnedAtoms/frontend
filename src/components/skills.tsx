@@ -24,10 +24,10 @@ const Skills = () => {
 
     useGSAP(() => {
         const skillSet:HTMLDivElement = skillsContainer.current!;
-        skillsAnim(skillSet);
+        if(skillSet){
+            skillsAnim(skillSet);
+        }
     })
-    
-
     
     return (
         <div className="lg:relative lg:top-16 lg:h-[110vh] flex flex-col items-center">
