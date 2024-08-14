@@ -80,7 +80,7 @@ const Projects = () => {
                                 ) : (
                                     <video className="absolute z-0 w-full h-full object-cover" src={item.videoUrl!} autoPlay loop muted></video>
                                 )}
-                                <div className="overlay absolute inset-0 z-10 flex flex-col justify-center items-center opacity-0 xl:hover:opacity-100 transition-opacity duration-300">
+                                <div className="overlay absolute inset-0 z-10 flex flex-col justify-center items-center opacity-0 xl:hover:opacity-100 transition-opacity duration-300 will-change-transform">
                                     <h3 className="text-2xl font-semibold mb-2">{item.projectName}</h3>
                                 </div>
                             </div>
