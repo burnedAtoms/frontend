@@ -12,28 +12,28 @@ interface Projects {
 export const projects:Projects[] = [
     {
         projectName: "LINE Chatbot",
-        imgUrl: "http://localhost:5173/frontend/src/assets/web/project-assets/line_chatbot_mock.png",
+        imgUrl: "/frontend/src/assets/web/project-assets/line_chatbot_mock.png",
         description: "Automatically Send Rent payment reminders to tenants, schedule apartment viewing dates, setup rent payment schudules etc",
         stack:["Node.js","Javascript","HTML","CSS","DialogFlowCX","Firebase Cloud Functions"],
         contributors:["Zenroy Chance"]
     },
     {
         projectName: "Notion Task Timer",
-        imgUrl: "http://localhost:5173/frontend/src/assets/web/project-assets/notion_timeclock_mock.png",
+        imgUrl: "/frontend/src/assets/web/project-assets/notion_timeclock_mock.png",
         description: "Athis allows you to track the time spend doing a task on notion.",
         stack:["Node.js","Javascript / TypeScript","HTML","CSS","React.js","Express","PostGreSQL"],
         contributors:["Zenroy Chance"]
     },
     {
         projectName: "VR SniperSIMS",
-        imgUrl: "http://localhost:5173/frontend/src/assets/web/project-assets/vr_snipersim_mock.webp",
+        imgUrl: "/frontend/src/assets/web/project-assets/vr_snipersim_mock.webp",
         description: "SniperSIM (SSM) is a Sniper Simulation VR game built using Unity and C#. This was the product of my VR course's final project.",
         stack:["C#","Unity","Blender"],
         contributors:["Zenroy Chance"],
     },
     {
         projectName: "Highlight Translator",
-        videoUrl:"http://localhost:5173/frontend/src/assets/web/project-assets/highlight-text-translator.mp4",
+        videoUrl:"/frontend/src/assets/web/project-assets/highlight-text-translator.mp4",
         description: "a chrome extension that uses gpt-4o to translate highlighted text to a preferred language",
         stack: ["HTML","JavaScript","CSS"],
         contributors: ["Zenroy Chance"]
@@ -41,14 +41,14 @@ export const projects:Projects[] = [
     {
         projectName: "CrosSight",
         imgUrl: null,
-        videoUrl: "http://localhost:5173/frontend/src/assets/web/project-assets/crossight.mp4",
+        videoUrl: "/frontend/src/assets/web/project-assets/crossight.mp4",
         description: "A mobile app to assist the visually imparied when crossing the street using Machine Learning and Object Detection.",
         stack: ["Python", "Kotlin","XML"],
         contributors: ["Zenroy Chance", "Alexis Ayuso"],
     },
     {
         projectName: "Nike - Landing Page",
-        videoUrl:"http://localhost:5173/frontend/src/assets/web/project-assets/nike_mock_video.mp4",
+        videoUrl:"/frontend/src/assets/web/project-assets/nike_mock_video.mp4",
         description: "This is a landing page of the brand Nike. It was Designed and developed to focus on Product Branding",
         stack:["HTML5","CSS","Javascript","React.js"],
         contributors:["Zenroy Chance"]
