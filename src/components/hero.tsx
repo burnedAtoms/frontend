@@ -11,7 +11,9 @@ const Hero = forwardRef((props,ref) => {
     const serviceRef = useRef(null);
 
     useGSAP(() => {
-        const tl = gsap.timeline({ repeat: -1 });
+        const tl = gsap.timeline({
+            ease: "custom", 
+            repeat: -1 });
         const serviceElement:HTMLElement = serviceRef.current!;
         CustomEase.create("custom", "M0,0 C0.042,0.084 0.341,0.708 0.485,0.708 0.61,0.708 0.721,0.476 0.8,0.6 0.895,0.75 0.966,0.931 1,1 ");
         services.forEach((service) => {
@@ -19,22 +21,21 @@ const Hero = forwardRef((props,ref) => {
                 opacity: 0,
                 x: "-50%",
                 duration: 0,
-                ease: "custom",
             })
-            .to(serviceRef.current, {
+            .to(serviceElement, {
                 opacity: 1,
                 x: "0%",
-                duration: 1.5,
-                ease: "custom",
+                duration: 2,
+                immediateRender:false,
                 onStart: () => {
                     serviceElement.textContent = service;
                 },
             })
-            .to(serviceRef.current, {
+            .to(serviceElement, {
                 opacity: 0,
                 x: "50%",
                 duration:0.5,
-                ease: "custom",
+                immediateRender:false,
                 delay: 1, 
             });
         });
@@ -45,7 +46,7 @@ const Hero = forwardRef((props,ref) => {
         <div ref={container} className="relative -top-[6rem] h-screen w-full max-lg:flex max-lg:flex-col max-lg:items-center items-center justify-center">
             <div className="relative w-screen flex flex-row justify-center h-screen items-center overflow-clip">
             <span className="relative z-30 mt-8 w-full hero-header-text flex justify-center font-extrabold leading-[14rem] uppercase">
-                ZENROY S. CHANCE
+                ZENROY CHANCE
             </span>
                 <div className="lg:h-full flex items-center">
                     <img
