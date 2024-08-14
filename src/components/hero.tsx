@@ -44,14 +44,14 @@ const Hero = forwardRef((props,ref) => {
 
     return (
         <div ref={container} className="relative -top-[6rem] h-screen w-full max-lg:flex max-lg:flex-col max-lg:items-center items-center justify-center">
-            <div className="relative w-screen flex flex-row justify-center h-screen items-center overflow-clip">
-            <span className="relative z-30 mt-8 w-full hero-header-text flex justify-center font-extrabold leading-[14rem] uppercase">
+            <div className="relative w-screen flex max-lg:flex-col flex-row justify-center h-screen items-center overflow-clip">
+            <span className="relative z-30 mt-8 hero-header-text flex max-lg:items-center text-center lg:justify-center font-extrabold max-md:leading-[6rem] leading-[12rem] uppercase">
                 ZENROY CHANCE
             </span>
-                <div className="lg:h-full flex items-center">
+                <div className="lg:h-full flex max-lg:justify-center items-center">
                     <img
                     ref={ref as MutableRefObject<HTMLImageElement>}
-                    className="absolute -right-[18vw] flex justify-self-center opacity-30 profile-img w-clamp-profile aspect-square object-cover object-[center_top]"
+                    className="absolute max-lg:top-[30vh] lg:-right-[18vw] flex justify-self-center opacity-30 profile-img w-clamp-profile aspect-square object-cover object-[center_top]"
                     src="http://localhost:5173/src/assets/web/profile_logo.png"
                 />
                 </div>

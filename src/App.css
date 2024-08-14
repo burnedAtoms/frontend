@@ -122,7 +122,11 @@ h1 {
   @apply font-mono h-full flex items-center justify-start text-slate-100;
 }
 
+/* Projects Section Style */
 
+.projectHeading {
+  font-size: clamp(2em, 14vw + 1rem, 20em)
+}
 
 .quote-color {
   background: linear-gradient(90deg, #3ce7de, #91FF82);

@@ -65,14 +65,14 @@ const Projects = () => {
     };
 
     return (
-        <div ref={projectsContainer} className="relative min-h-[140vh] self-center flex flex-col justify-center items-center">
-            <h1 ref={projectHeadingRef} className="projectHeading relative z-10 text-center text-[20em] font-extrabold text-white tracking-widest will-change-[opacity,transform]">PROJECTS</h1>
+        <div ref={projectsContainer} className="relative min-h-[140vh] w-full flex flex-col justify-center items-center">
+            <h1 ref={projectHeadingRef} className="projectHeading relative z-10 text-center font-extrabold text-white tracking-widest will-change-[opacity,transform]">PROJECTS</h1>
             <span ref={projectButtonRef} className="flex justify-center items-center absolute bottom-4 px-6 py-3 bg-transparent border-white border-2 rounded-full capitalize hover:bg-green-500 hover:border-transparent bg-clip-padding hover font-semibold text-lg tracking-wider">
                 <a href="https://github.com/burnedAtoms?tab=repositories">View Github</a>
             </span>
-            <div ref={itemsWrapperRef} className="absolute z-20 gap-4 h-screen w-screen grid grid-cols-3 grid-rows-2 overflow-hidden">
+            <div ref={itemsWrapperRef} className="lg:absolute z-20 gap-4 w-full lg:h-screen lg:w-screen grid lg:grid-cols-3 lg:grid-rows-2 overflow-hidden">
                 {projects.map((item, index) => (
-                    <div key={index} className="flip-card relative flex justify-center items-center min-w-1/3 min-h-1/2 will-change-transform cursor-pointer" onClick={() => handleFlipCard(index)}>
+                    <div key={index} className="flip-card relative flex justify-center items-center max-lg:h-[24rem] w-full lg:min-w-1/3 lg:min-h-1/2 will-change-transform cursor-pointer" onClick={() => handleFlipCard(index)}>
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 {item.imgUrl ? (
@@ -80,7 +80,7 @@ const Projects = () => {
                                 ) : (
                                     <video className="absolute z-0 w-full h-full object-cover" src={item.videoUrl!} autoPlay loop muted></video>
                                 )}
-                                <div className="overlay absolute inset-0 z-10 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <div className="overlay absolute inset-0 z-10 flex flex-col justify-center items-center opacity-0 xl:hover:opacity-100 transition-opacity duration-300">
                                     <h3 className="text-2xl font-semibold mb-2">{item.projectName}</h3>
                                 </div>
                             </div>

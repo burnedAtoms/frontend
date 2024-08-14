@@ -30,7 +30,7 @@ function App() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: heroImg,
-            start: "clamp(top 80px)",
+            start: "top top-=96px",
             scrub: true,
           },
         });
@@ -59,7 +59,7 @@ function App() {
         <section>
           <Skills />
         </section>
-        <section className="w-full">
+        <section>
           <WorkExperience />
         </section>
         <section>
