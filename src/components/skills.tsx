@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { skills } from '../lists/skills-list';
 import { useGSAP } from '@gsap/react';
 import skillsAnim from '../animations/skills-anim';

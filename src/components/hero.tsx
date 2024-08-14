@@ -6,7 +6,7 @@ import { services } from '../lists/services';
 
 gsap.registerPlugin(CustomEase);
 
-const Hero = forwardRef((props,ref) => {
+const Hero = forwardRef((ref) => {
     const container = useRef(null);
     const serviceRef = useRef(null);
 
