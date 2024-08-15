@@ -115,7 +115,7 @@ h1 {
 }
 
 .tw-skills-container {
-  @apply flex flex-wrap max-w-[80%] lg:max-w-[50%] justify-center items-center will-change-auto overflow-hidden;
+  @apply flex flex-wrap max-w-[80%] lg:max-w-[50%] justify-center items-center overflow-hidden;
 }
 
 #skills-container > span {
