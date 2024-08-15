@@ -1,0 +1,36 @@
+import React from 'react'
+import Footer from './Footer'
+
+const Contact = () => {
+    return (
+        <div id="contact-container" className="w-full">
+            <div id="contact-wrapper" className="bg-white lg:w-full border-none rounded-lg flex justify-center p-8">
+                <div id="contact-content" className="w-fit">
+                    <h1 className="text-primary text-[8.5vw] font-extrabold font-[font-family: poppins]">Get<span>.</span> In<span>.</span> Touch<span>.</span></h1>
+                    <form id="contact-form" action="send-message" method="post" className="flex flex-col w-full gap-8 items-center">
+                        <div className="w-full flex flex-row max-md:flex-col gap-8 max-md:flex-wrap">
+                            <div className="w-full md:w-1/2 flex flex-col flex-1 justify-start">
+                                <div>
+                                    <label htmlFor="" className="text-start">Full name</label>
+                                    <input type="text" required />
+                                </div>
+                                <div>
+                                    <label htmlFor="" className="text-start">Email</label>
+                                    <input type="email" required />
+                                </div>
+                            </div>
+                            <div className="w-full flex flex-col md:w-1/2">
+                                <label htmlFor="" className="text-start">Message</label>
+                                <textarea name="" id="" className="px-3 py-2 flex flex-grow text-start text-primary text-wrap bg-white outline-none border-2 border-gray-500/40 rounded-lg focus:border-green-600" required />
+                            </div>
+                        </div>
+                        <button type="submit" className="w-fit block bg-primary border-2 border-primary/30 rounded-full px-8 py-4 text-green-400 hover:text-white hover:bg-green-600 font-bold text-lg tracking-wider uppercase transition-transform">Send</button>
+                    </form>
+                    <Footer />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Contact
