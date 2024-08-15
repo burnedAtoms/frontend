@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Contact from './components/Contact';
 
-const { Header, Hero, Note, Skills, WorkExperience, Projects } = Sections;
+const { Header, Hero, Skills, WorkExperience, Projects } = Sections;
 
 gsap.registerPlugin(ScrollTrigger);
 

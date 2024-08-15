@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { projects } from '../lists/projects';
-import Footer from './Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 

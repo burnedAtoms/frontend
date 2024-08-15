@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 const Footer = () => {
     const socials = [
         { name: "Github", socialUrl: "", iconUrl: "/frontend/assets/web/github-mark-white.svg" },
