@@ -119,8 +119,7 @@ h1 {
 }
 
 #skills-container > span {
-  transform-style: preserve-3d;
-  @apply box-content overflow-hidden border-[1px] border-white rounded-full text-white text-[2vw] px-6 py-3 caudex-regular will-change-[transform,opacity,blur];
+  @apply box-content overflow-hidden border-[1px] border-white rounded-full text-white text-[2vw] px-6 py-3 caudex-regular;
 }
 
 

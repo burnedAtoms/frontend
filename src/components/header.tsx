@@ -21,7 +21,7 @@ const Header = forwardRef((_props,ref) => {
             <span className="header-items-wrapper" onClick={() => scrollToNavItem("projects-container")}>
                 Project
             </span>
-            <span className="header-items-wrapper">
+            <span className="header-items-wrapper" onClick={() => {scrollToNavItem("contact-container")}}>
                 Contact
             </span>
         </header>
