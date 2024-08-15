@@ -4,6 +4,7 @@ import Sections from './components/index';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Contact from './components/Contact';
 
 const { Header, Hero, Note, Skills, WorkExperience, Projects } = Sections;
 
@@ -50,10 +51,10 @@ function App() {
   }, { scope: heroContainer, dependencies: [window.innerWidth] });
 
   return (
-    <div id="main-wrapper" className="w-screen px-6">
+    <div id="main-wrapper" className="relative w-screen px-6">
       <Header ref={headerRef} />
-      <main id="main-content" className="relative w-full flex flex-col items-center gap-8">
-        <section ref={heroContainer}>
+      <main id="main-content" className="relative w-full flex flex-col justify-between items-center gap-8">
+        <section ref={heroContainer} className="">
           <Hero ref={heroRef} />
         </section>
         <section>
@@ -65,10 +66,12 @@ function App() {
         <section>
           <Projects />
         </section>
-        <section>
-          <Note />
-        </section>
       </main>
+      <footer>
+        <section id="contact-section" className="w-full flex flex-grow">
+            <Contact />
+          </section>
+      </footer>
     </div>
   );
 }

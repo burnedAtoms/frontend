@@ -55,7 +55,7 @@ const WorkExperience = () => {
     return (
         <div id="work-education-container" className="lg:h-[100vh] w-full lg:w-screen bg-primary mx-6 p-4 flex-col gap-8 flex justify-center items-center">
             <div ref={eduRef} id="education-container" className="flex flex-col w-3/5 gap-8 justify-center items-center">
-                <h1 className="text-[5em] text-gray-300">Education</h1>
+                <h1 id="education-heading" className="text-[5em] text-gray-300">Education</h1>
                 {educationItems.map((edu:Items) => (
                     <div key={edu.id} className="flex flex-row items-center w-full border-slate-400 gap-6 border-y-[1px] py-1 ml-6">
                         <div className="col-left h-full flex flex-col justify-stretch items-start flex-grow gap-2">
@@ -68,7 +68,7 @@ const WorkExperience = () => {
                 ))}
             </div>
             <div ref={workExpRef} id="work-container" className="flex flex-col w-3/5 gap-8 justify-center items-center">
-                <h1 className="text-[5em] text-bold text-gray-300">Work Experience</h1>
+                <h1 id="work-experience-heading" className="text-[5em] text-bold text-gray-300">Work Experience</h1>
                 {WorkExperienceItems.map((workExp:Items) => (
                     <div key={workExp.id} className="flex flex-row items-center w-full border-slate-400 gap-6 border-y-[1px] py-1 ml-6">
                         <div className="col-left h-full flex flex-col justify-stretch items-start flex-grow gap-2">

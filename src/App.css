@@ -30,6 +30,10 @@
   font-style: normal;
 }
 
+#main-content > section {
+  @apply w-full flex flex-grow justify-center;
+}
+
 /* Root */
 #root {
   max-width: 1920px;
@@ -42,7 +46,8 @@ html {
 }
 
 h1 {
-  @apply caudex-bold font-extrabold tracking-tight leading-relaxed
+  font-size: clamp(2em, 14vw + 1rem, 20em);
+  @apply caudex-bold font-extrabold tracking-tight leading-relaxed;
 }
 
 
@@ -104,13 +109,18 @@ h1 {
 /*
   Skills Section Styles
 */
+#skills-heading {
+  font-size: clamp(2em, 14vw + 1rem, 20em);
+  @apply lg:absolute flex text-center caudex-bold text-white;
+}
 
 .tw-skills-container {
   @apply flex flex-wrap max-w-[80%] lg:max-w-[50%] justify-center items-center will-change-auto overflow-hidden;
 }
 
 #skills-container > span {
-  @apply border-[1px] border-white rounded-full text-white text-[2vw] px-6 py-3 caudex-regular will-change-auto;
+  transform-style: preserve-3d;
+  @apply box-content overflow-hidden border-[1px] border-white rounded-full text-white text-[2vw] px-6 py-3 caudex-regular will-change-[transform,opacity,blur];
 }
 
 
@@ -122,10 +132,13 @@ h1 {
   @apply font-mono h-full flex items-center justify-start text-slate-100;
 }
 
-/* Projects Section Style */
+/* Work Experience & Education History Styles */
 
+
+
+/* Projects Section Style */
 .projectHeading {
-  font-size: clamp(2em, 14vw + 1rem, 20em)
+  font-size: clamp(2em, 14vw + 1rem, 20em);
 }
 
 .quote-color {
@@ -134,6 +147,21 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+/* Contact Form Styles */
+#contact-form {
+  @apply w-full
+}
+#contact-form * > input {
+  @apply bg-transparent border-2 border-gray-500/40 w-full text-primary outline-none rounded-md px-3 py-2 focus:border-green-600;
+}
+#contact-form * > label {
+  @apply block text-primary font-bold poppins-regular;
+}
+
+#contact-wrapper h1 > span {
+  @apply text-green-600 font-extrabold;
 }
 
 /* Animations */
@@ -191,6 +219,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 70;
 }
 
 .overlay {
@@ -208,18 +237,4 @@ h1 {
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-.flip-card h3 {
-  transform: perspective(500px), translateZ(50px);
-}
-
-.flip-card .view-details-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #4a5568;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
