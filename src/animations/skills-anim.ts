@@ -23,6 +23,7 @@ function skillsAnim(ref: HTMLDivElement) {
                     trigger: skillsContainer,
                     start: "center center",
                     pin: skillsContainer,
+                    markers: true,
                     end: "+=150%",
                     scrub: 1.5,
                 }
@@ -49,9 +50,9 @@ function skillsAnim(ref: HTMLDivElement) {
                 opacity: 0,
                 transformOrigin: "center 70%",
                 ease: "power2.inOut",
-                immediateRender: false,
             }, {
                 scale: 1,
+                immediateRender: false,
                 transformOrigin: "center center",
                 ease: "power2.inOut",
                 duration: 0.3,
