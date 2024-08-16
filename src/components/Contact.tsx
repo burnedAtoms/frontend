@@ -6,7 +6,7 @@ const Contact = () => {
             <div id="contact-wrapper" className="bg-white lg:w-full border-none rounded-lg flex justify-center p-8">
                 <div id="contact-content" className="w-fit">
                     <h1 className="text-primary text-[8.5vw] font-extrabold font-[font-family: poppins]">Get<span>.</span> In<span>.</span> Touch<span>.</span></h1>
-                    <form id="contact-form" action="send-message" method="post" className="flex flex-col w-full gap-8 items-center">
+                    <form id="contact-form" action="send-message" method="post" className="flex flex-col w-full gap-12 items-center">
                         <div className="w-full flex flex-row max-md:flex-col gap-8 max-md:flex-wrap">
                             <div className="w-full md:w-1/2 flex flex-col flex-1 justify-start">
                                 <div>
