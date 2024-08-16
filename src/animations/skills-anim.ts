@@ -23,7 +23,6 @@ function skillsAnim(ref: HTMLDivElement) {
                     trigger: skillsContainer,
                     start: "center center",
                     pin: skillsContainer,
-                    markers: true,
                     end: "+=150%",
                     scrub: 1.5,
                 }
