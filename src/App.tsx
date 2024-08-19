@@ -51,10 +51,10 @@ function App() {
   }, { scope: heroContainer, dependencies: [window.innerWidth] });
 
   return (
-    <div id="main-wrapper" className="relative w-screen px-6">
+    <div id="main-wrapper" className="relative w-screen">
       <Header ref={headerRef} />
-      <main id="main-content" className="relative w-full flex flex-col justify-between items-center gap-8">
-        <section ref={heroContainer} className="">
+      <main id="main-content" className="relative w-full flex flex-col justify-between items-center gap-8 overflow-hidden">
+        <section ref={heroContainer}>
           <Hero ref={heroRef} />
         </section>
         <section>
@@ -67,8 +67,8 @@ function App() {
           <Projects />
         </section>
       </main>
-      <footer>
-        <section id="contact-section" className="w-full flex flex-grow">
+      <footer className="max-lg:mt-6">
+        <section id="contact-section" className="w-full flex flex-grow px-6">
             <Contact />
           </section>
       </footer>
