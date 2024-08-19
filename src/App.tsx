@@ -63,7 +63,7 @@ function App() {
         <section>
           <WorkExperience />
         </section>
-        <section>
+        <section className="overflow-hidden">
           <Projects />
         </section>
       </main>
