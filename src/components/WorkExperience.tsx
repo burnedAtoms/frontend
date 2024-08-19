@@ -71,10 +71,10 @@ const WorkExperience = () => {
                 <h1 id="work-experience-heading" className="text-[5em] text-bold text-gray-300">Work Experience</h1>
                 {WorkExperienceItems.map((workExp:Items) => (
                     <div key={workExp.id} className="flex flex-row items-center w-full border-slate-400 gap-6 border-y-[1px] py-1 ml-6">
-                        <div className="col-left h-full flex flex-col justify-stretch items-start flex-grow gap-2">
+                        <div className="col-left h-full flex flex-col justify-stretch items-start flex-grow gap-2 text-start">
                             {workExp.leftItems.slice(0,-1).map((item:[string, string | string[]]) => <span className="h-full ">{item[1]}</span>)}
                         </div>
-                        <div className="col-right h-full flex-col flex justify-stretch items-end flex-grow">
+                        <div className="col-right h-full flex-col flex justify-stretch items-end text-end">
                             {workExp.rightItems.map((item:[string, string | string[]]) => <span>{item[1]}</span>)}
                         </div>
                     </div>

@@ -128,7 +128,7 @@ h1 {
 }
 
 #work-education-container span {
-  @apply font-mono h-full flex items-center justify-start text-slate-100;
+  @apply font-[poppins] h-full flex items-center justify-start text-slate-100;
 }
 
 /* Work Experience & Education History Styles */
