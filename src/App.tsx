@@ -53,7 +53,7 @@ function App() {
   return (
     <div id="main-wrapper" className="relative w-screen">
       <Header ref={headerRef} />
-      <main id="main-content" className="relative w-full flex flex-col justify-between items-center gap-8 overflow-hidden">
+      <main id="main-content" className="relative w-full flex flex-col justify-between items-center gap-8">
         <section ref={heroContainer}>
           <Hero ref={heroRef} />
         </section>
