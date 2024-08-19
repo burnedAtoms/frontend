@@ -85,7 +85,7 @@ const Projects = () => {
                                 </div>
                                 <h3 className="text-2xl font-semibold mb-2">{item.projectName}</h3>
                                 <p className="text-center w-2/3 line-clamp-3 capitalize">{item.description}</p>
-                                <a onClick={(e) => e.stopPropagation()} className="absolute bottom-10 z-30 flex justify-self-end mt-10 px-4 py-2 bg-transparent border-white border-2 rounded-full capitalize hover:bg-green-600 hover:border-transparent box-border font-semibold text-sm tracking-wider" href={item.gitUrl!}>View Github</a>
+                                <a onClick={(e) => e.stopPropagation()} className="relative bottom-5 z-30 flex justify-self-end mt-10 px-4 py-2 bg-transparent border-white border-2 rounded-full capitalize hover:bg-green-600 hover:border-transparent box-border font-semibold text-sm tracking-wider" href={item.gitUrl!}>View Github</a>
                             </div>
                         </div>
                     </div>

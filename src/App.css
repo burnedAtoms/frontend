@@ -159,6 +159,10 @@ h1 {
   @apply block text-primary font-bold poppins-regular;
 }
 
+#contact-wrapper h1 {
+  font-size: clamp(2em, 8.5vw + 1rem, 20em);
+}
+
 #contact-wrapper h1 > span {
   @apply text-green-600 font-extrabold;
 }
