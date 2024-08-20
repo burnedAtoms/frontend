@@ -6,7 +6,7 @@ const Contact = () => {
             <div id="contact-wrapper" className="bg-white lg:w-full border-none rounded-lg flex justify-center p-8">
                 <div id="contact-content" className="w-fit flex flex-col items-center">
                     <h1 className="text-primary text-[8.5vw] font-extrabold font-[font-family: poppins]">Get<span>.</span> In<span>.</span> Touch<span>.</span></h1>
-                    <div className="max-md:text-sm w-2/3 mb-4 px-6 py-3 border-l-4 border-yellow-500 text-yellow-700 bg-yellow-100 rounded text-wrap">
+                    <div className="max-md:text-sm max-md:w-fit w-2/3 mb-4 px-6 py-3 border-l-4 border-yellow-500 text-yellow-700 bg-yellow-100 rounded text-wrap">
                         <strong>Notice:</strong> The backend for this site is currently under development. Form submissions are not being processed at this time. Please contact zenroychance@gmail.com
                     </div>
                     <form id="contact-form" action="send-message" method="post" className="flex flex-col w-full gap-12 items-center">
