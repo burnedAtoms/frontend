@@ -7,8 +7,8 @@ const Footer = () => {
         <div id="footer-container" className="mt-10 lg:mt-[4rem] text-[font-family:poppins]">
             <div id="socials-wrapper" className="flex flex-col gap-8 text-primary">
                 <div className="flex justify-center items-center gap-6">
-                    {socials.map(item => (
-                        <a className="flex flex-row justify-center items-center hover:text-green-500 gap-2 cursor-pointer" href={item.socialUrl}>
+                    {socials.map((item,index) => (
+                        <a key={index} className="flex flex-row justify-center items-center hover:text-green-500 gap-2 cursor-pointer" href={item.socialUrl}>
                             <span>
                                 <img width={24} height={24} src={item.iconUrl}></img>
                             </span>

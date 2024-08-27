@@ -62,7 +62,7 @@ const Projects = () => {
 
     return (
         <div id="projects-container" ref={projectsContainer} className="min-h-[120vh] w-full flex flex-col justify-center items-center">
-            <h1 ref={projectHeadingRef} className="projectHeading relative z-10 text-center font-extrabold text-white tracking-widest will-change-[opacity,transform]">PROJECTS</h1>
+            <h1 ref={projectHeadingRef} className="projectHeading"><span className="text-green-500">P</span>ROJECTS</h1>
             <div ref={itemsWrapperRef} className="lg:absolute z-20 gap-4 w-full lg:h-screen lg:w-screen grid lg:grid-cols-3 lg:grid-rows-2 overflow-hidden">
                 {projects.map((item, index) => (
                     <div key={index} className="flip-card relative z-30 flex justify-center items-center max-lg:h-[24rem] w-full lg:min-w-1/3 lg:min-h-1/2 cursor-pointer" onClick={() => handleFlipCard(index)}>

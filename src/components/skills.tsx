@@ -20,7 +20,7 @@ const Skills = () => {
     
     return (
         <div className="lg:relative lg:top-16 lg:h-[110vh] flex flex-col items-center overflow-clip box-border">
-            <h1 id="skills-heading">SKILLS</h1>
+            <h1 id="skills-heading"><span className="text-green-500">S</span>KILLS</h1>
             <div ref={skillsContainer} id="skills-container" className="tw-skills-container box-border">  
                 {skillItems.map((itemName, index) => (
                     <span key={index}>{itemName}</span>

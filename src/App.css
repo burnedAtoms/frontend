@@ -46,7 +46,7 @@ html {
 }
 
 h1 {
-  font-size: clamp(2em, 14vw + 1rem, 20em);
+  font-size: clamp(2em, 12vw + 1rem, 20em);
   @apply caudex-bold font-extrabold tracking-tight leading-relaxed;
 }
 
@@ -75,8 +75,13 @@ h1 {
 
 /* Header Styles */
 .resume-header {
-  @apply sticky mx-auto z-50 top-4 max-lg:w-full max-lg:gap-6 gap-4 px-6 py-2 flex flex-row justify-center lg:justify-between items-center max-lg:flex-wrap
+  @apply sticky mx-auto py-2 z-40 top-4 w-full max-lg:gap-6 gap-4 flex flex-row justify-end lg:justify-between items-center max-lg:flex-wrap
 }
+
+.drawerIcon {
+  @apply fixed mr-6 py-[calc(72px/2)] top-4 flex self-end z-50 cursor-pointer transition-transform ease-in-out duration-300 !mix-blend-difference hover:fill-green-500;
+}
+
 .header-items-wrapper {
   @apply py-2 px-6 border-[calc(1px)] border-white rounded-3xl bg-primary text-center tracking-wider font-semibold font-sans box-border;
 }
@@ -100,6 +105,15 @@ h1 {
 }
 
 /* 
+  Drawer Items Styles
+ */
+.nav-items {
+  font-size: clamp(2em, 7vw + 1rem, 5em);
+  @apply h-1/5 w-4/5 flex justify-center items-center hover:text-green-500 active:text-green-600 font-[Poppins] tracking-widest font-extrabold uppercase;
+}
+
+
+/* 
   Note Styles 
 */
 .quote-text {
@@ -110,7 +124,7 @@ h1 {
   Skills Section Styles
 */
 #skills-heading {
-  font-size: clamp(2em, 14vw + 1rem, 20em);
+  font-size: clamp(2em, 12vw + 1rem, 20em);
   @apply lg:absolute flex text-center caudex-bold text-white;
 }
 
@@ -124,21 +138,25 @@ h1 {
 }
 
 
-#education-container > * > span {
-  @apply h-full flex flex-1;
+/* Work Experience & Education History Styles */
+#education-container span {
+  @apply font-[poppins] h-full flex text-slate-100;
 }
 
 #work-education-container span {
-  @apply font-[poppins] h-full flex items-center justify-start text-slate-100;
+  @apply font-[poppins] h-full flex text-slate-100;
 }
 
-/* Work Experience & Education History Styles */
-
+.work-education-text {
+  font-size: clamp(1em, 6vw + 1em, 20em);
+  @apply font-bold text-gray-300;
+}
 
 
 /* Projects Section Style */
 .projectHeading {
-  font-size: clamp(2em, 14vw + 1rem, 20em);
+  font-size: clamp(2em, 12vw + 1em, 20em);
+  @apply relative mx-4 z-10 text-center font-extrabold text-white tracking-widest will-change-[opacity,transform];
 }
 
 .quote-color {

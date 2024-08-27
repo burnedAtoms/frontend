@@ -58,7 +58,7 @@ const Hero = forwardRef((_props, ref) => {
                 </div>
             </div>
             <div id="about-wrapper" className="absolute bottom-0 bg-white py-8 w-screen gap-4 flex justify-center items-center">
-                <h2 id="about-content" ref={serviceRef} className="text-2xl text-secondary caudex-regular font-extrabold uppercase">
+                <h2 id="about-content" ref={serviceRef} className="text-2xl text-green-500 caudex-bold uppercase">
                 </h2>
             </div>
         </div>
